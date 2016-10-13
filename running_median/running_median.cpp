@@ -7,8 +7,8 @@
 #include <queue>
 #include <iomanip>
 
-// The only reason this is used is so we  can access the protected member c.reserve()
-// When dealing with huge sizes, pre-allocation for array has a huge efficiency impact 
+// The only reason this reserved_priority_queue (subclass) is used is so we  can access the protected member c.reserve()
+// When dealing with huge size vectors, pre-allocation of dynamic memory has a huge efficiency advantage 
 template <typename Compare>
 class reserved_priority_queue : public std::priority_queue< int , std::vector<int>, Compare > {
     public:
@@ -18,10 +18,10 @@ class reserved_priority_queue : public std::priority_queue< int , std::vector<in
 };
 
 // Summary:
-//  - using a combined 2 heap data structures (q_max, and q_min )
-//  - q_min is a min heap, but should contain all possible values >= media
+//  - using a combined 2 heap data structures (q_max and q_min )
+//  - q_min is a min heap, but should contain all possible values >= median
 //  - q_max is a max heap, but should contain all possible values <= median
-//  - complexity should be O (log  n/n )  
+//  - complexity should be O(log  n/2 )  
 //
 class median_container{
    public:
