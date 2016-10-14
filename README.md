@@ -1,2 +1,2 @@
 # HackerRank-submissions
-Collection of my hacker rank submitted codes
+Collection of my submitted codes in www.hackerrank.com
