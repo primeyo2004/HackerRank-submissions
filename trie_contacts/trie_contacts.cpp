@@ -16,7 +16,7 @@
 //    - find(partial) - find the partial (prefix) string from the trie contacts and return the number of partial word match     
 //    - Uses iterative approach (as opposed to recursive), this should handle longer names without worrying about stack overflow issues.
 //    - trie_contact::trie_node 
-//       - uses std::map to dynamically store the child nodes (hence range of ascii char set)
+//       - uses std::map to dynamically store the child nodes (hence wider range of ascii char set)
 //
 class trie_contacts {
     protected:    
